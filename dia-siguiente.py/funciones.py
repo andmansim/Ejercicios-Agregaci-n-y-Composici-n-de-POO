@@ -10,3 +10,9 @@ class Edificios(Ciudades):
         self.B = B
         self.C = C
 
+class Empresa(Edificios):
+    def __init__(self, NY, LAS, A, B, C, empleados):
+        super().__init__(NY, LAS, A, B, C)
+        self.empleados = empleados
+        
+        self.empleados = ['Martin', 'Salim', 'Xing']
