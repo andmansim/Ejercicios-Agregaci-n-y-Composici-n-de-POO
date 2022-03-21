@@ -16,3 +16,14 @@ class Empresa(Edificios):
         self.empleados = empleados
         
         self.empleados = ['Martin', 'Salim', 'Xing']
+        
+ciudad = Ciudades()
+edificio = Edificios()
+empresa = Empresa()
+
+class destruccion_NY(Edificios):
+    def __init__(self, NY, LAS, A, B, C):
+        super().__init__(NY, LAS, A, B, C)
+    def __del__(self):
+        Ciudades.remove(self.NY)
+        Edificios.remove(self.A, self.B)
