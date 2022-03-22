@@ -10,12 +10,17 @@ class Edificios:
         return self.nomEdif
         
 
-class Empresa:
-    def __init__(self, nomEmp, l_empl, l_edificios):
-        self.nomEmp = nomEmp # Nombre de la empresa (Yoohoo)
+class Empresa: #me crea los atributos para luego guardármelos fuera
+    def __init__(self, nomEmpr, l_empl, l_edificios):
+        self.nomEmp = nomEmpr # Nombre de la empresa (Yoohoo)
         self.l_empl = l_empl #lista de los empleados
-        self.edificio = []
-        self.empleados = ['Martin', 'Salim', 'Xing']
+        self.l_edificios = l_edificios #lista que contiene todos los edificios de la empresa
+
+class Empleados: #clase que nos crea los atributos asociados a los nombres de los empleados
+    def __init__(self, nomEmpl):
+        self.nomEmpl = nomEmpl
+        
+self.empleados = ['Martin', 'Salim', 'Xing']
         
 
 edificio = (Edificios() for i in range (2))
