@@ -6,7 +6,7 @@ class Ciudades:
     def añadir_edificios(self, edificio):
         self.l_edif.append(edificio)
         
-    def devolver (self):
+    def devolver(self):
         return self.l_edif
     
 class Edificios:
