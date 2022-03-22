@@ -17,6 +17,9 @@ if __name__ == "__main__":
     print("¿Quiere destruir NY? Y/N")
     usuario = input()
     if usuario == "Y":
-        pass
+        funciones.ciudad1.__del__()
+        print("Se ha destruido toda la ciudad de NY")
+    elif usuario == "N":
+        print("Perfecto, gracias por no destruir NY")   
     else:
         print("Esa opción no es válida, por favor intentelo de nuevo")
