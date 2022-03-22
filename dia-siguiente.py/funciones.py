@@ -1,17 +1,19 @@
 class Ciudades:
     def __init__(self, nombre):
-        self.nombre = nombre # NY LA
+        self.nombre = nombre # NY, LA
         self.l_edif = [] #lista donde guardamos los edificios que pertenecen a una ciudad
+        return self.l_edif
 
 class Edificios:
     def __init__(self, nomEdif):
-        self.nomEdif = nomEdif
-        self.ciudad = None
+        self.nomEdif = nomEdif # A, B, C
+        return self.nomEdif
         
 
 class Empresa:
-    def __init__(self, empleados):
-        self.empleados = empleados
+    def __init__(self, nomEmp, l_empl, l_edificios):
+        self.nomEmp = nomEmp # Nombre de la empresa (Yoohoo)
+        self.l_empl = l_empl #lista de los empleados
         self.edificio = []
         self.empleados = ['Martin', 'Salim', 'Xing']
         
