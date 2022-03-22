@@ -1,24 +1,25 @@
 class Ciudades:
     def __init__(self, nombre):
         self.nombre = nombre
-        
+        self.edificio = [] #los edificios que pertenecen a una ciudad
 
-class Edificios(Ciudades):
-    def __init__(self, nombre, nomEdif):
-        super().__init__(nombre)
+class Edificios:
+    def __init__(self, nomEdif):
         self.nomEdif = nomEdif
+        self.ciudad = None
         
 
-class Empresa(Edificios):
-    def __init__(self, NY, LAS, A, B, C, empleados):
-        super().__init__(NY, LAS, A, B, C)
+class Empresa:
+    def __init__(self, empleados):
         self.empleados = empleados
-        
+        self.edificio = []
         self.empleados = ['Martin', 'Salim', 'Xing']
         
 ciudad = Ciudades("NY")
-ciudad1 = Ciudades("LAS")
-edificio = Edificios()
+edificio = (Edificios() for i in range (2))
+ciudad.edificio = edificio
+for j in edificio: 
+    edificio.ciudad = ciudad
 empresa = Empresa()
 
 class destruccion_NY(Edificios):
