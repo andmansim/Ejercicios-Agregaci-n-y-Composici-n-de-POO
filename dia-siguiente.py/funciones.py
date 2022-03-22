@@ -15,16 +15,19 @@ class Empresa:
         self.edificio = []
         self.empleados = ['Martin', 'Salim', 'Xing']
         
-ciudad = Ciudades("NY")
+
 edificio = (Edificios() for i in range (2))
+ciudad = Ciudades("NY")
 ciudad.edificio = edificio
 for j in edificio: 
-    edificio.ciudad = ciudad
-empresa = Empresa()
+    j.ciudad = ciudad
+
+print(ciudad.nombre, edificio.ciudad[0])
+'''empresa = Empresa()
 
 class destruccion_NY(Edificios):
     def __init__(self, NY, LAS, A, B, C):
         super().__init__(NY, LAS, A, B, C)
     def __del__(self):
         Ciudades.remove(self.NY)
-        Edificios.remove(self.A, self.B)
+        Edificios.remove(self.A, self.B)'''
