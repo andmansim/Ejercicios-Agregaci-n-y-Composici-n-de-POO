@@ -1,14 +1,13 @@
 class Ciudades:
-    def __init__(self, NY, LAS):
-        self.NY = NY
-        self.LAS = LAS
+    def __init__(self, nombre):
+        self.nombre = nombre
+        
 
 class Edificios(Ciudades):
-    def __init__(self, NY, LAS, A, B, C):
-        super().__init__(NY, LAS)
-        self.A = A
-        self.B = B
-        self.C = C
+    def __init__(self, nombre, nomEdif):
+        super().__init__(nombre)
+        self.nomEdif = nomEdif
+        
 
 class Empresa(Edificios):
     def __init__(self, NY, LAS, A, B, C, empleados):
@@ -17,7 +16,8 @@ class Empresa(Edificios):
         
         self.empleados = ['Martin', 'Salim', 'Xing']
         
-ciudad = Ciudades()
+ciudad = Ciudades("NY")
+ciudad1 = Ciudades("LAS")
 edificio = Edificios()
 empresa = Empresa()
 
