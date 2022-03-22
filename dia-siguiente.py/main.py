@@ -19,6 +19,7 @@ if __name__ == "__main__":
     if usuario == "Y":
         funciones.ciudad1.eliminar()
         print("Se ha destruido toda la ciudad de NY")
+        print(funciones.ciudad1.nombre)
     elif usuario == "N":
         print("Perfecto, gracias por no destruir NY")   
     else:

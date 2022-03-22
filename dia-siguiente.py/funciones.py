@@ -10,10 +10,8 @@ class Ciudades:
         return self.l_edif
     
     def eliminar (self):
-        for w in self.l_edif:
-            index = self.l_edif(w)
-            self.l_edif.remove(index)
-        #ciudad1.l_edif.remove() #se elimina todos los edificios asociados a NY
+        ciudad1.l_edif.remove() #se elimina todos los edificios asociados a NY
+        del ciudad1.nombre
         
         
 class Edificios:
