@@ -19,7 +19,7 @@ class Edificios:
 
 class Empresa: #me crea los atributos para luego guardármelos fuera
     def __init__(self, nomEmpr, l_empl, l_edificios):
-        self.nomEmp = nomEmpr # Nombre de la empresa (Yoohoo)
+        self.nomEmpr = nomEmpr # Nombre de la empresa (Yoohoo)
         self.l_empl = l_empl #lista de los empleados
         self.l_edificios = l_edificios #lista que contiene todos los edificios de la empresa
 
@@ -44,9 +44,8 @@ empresa = Empresa("Yoohoo", lista_empleados, lista_edificio)
 
 #Ciudad
 ciudad1 = Ciudades("NY")
-ciudad2 = Ciudades("LA")
+ciudad2 = Ciudades("Los Ángeles")
 ciudad1.añadir_edificios(edif1) # nos añade a NY A
 ciudad1.añadir_edificios(edif2) # nos añade a NY B
 ciudad2.añadir_edificios(edif3) # nos añade a LA C
 
-print(ciudad2.añadir_edificios(edif3))
