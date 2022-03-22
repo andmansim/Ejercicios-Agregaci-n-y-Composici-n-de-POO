@@ -2,8 +2,10 @@ class Ciudades:
     def __init__(self, nombre):
         self.nombre = nombre # NY, LA
         self.l_edif = [] #lista donde guardamos los edificios que pertenecen a una ciudad
+    def añadir_edificios(self, edificio):
+        self.l_edif.append(edificio)
         return self.l_edif
-
+    
 class Edificios:
     def __init__(self, nomEdif):
         self.nomEdif = nomEdif # A, B, C
@@ -31,4 +33,13 @@ edif1 = Edificios("A")
 edif2 = Edificios("B")
 edif3 = Edificios("C")
 lista_edificio = [edif1, edif2, edif3]
-        
+
+#Empresa
+empresa = Empresa("Yoohoo", lista_empleados, lista_edificio)
+
+#Ciudad
+ciudad1 = Ciudades("NY")
+ciudad2 = Ciudades("LA")
+ciudad1.añadir_edificios(edif1) # nos añade a NY A
+ciudad1.añadir_edificios(edif2) # nos añade a NY B
+ciudad2.añadir_edificios(edif3) # nos añade a LA C
