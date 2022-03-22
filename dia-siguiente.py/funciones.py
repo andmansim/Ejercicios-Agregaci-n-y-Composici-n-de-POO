@@ -11,7 +11,7 @@ class Ciudades:
     
     def eliminar (self):
         ciudad1.l_edif.remove() #se elimina todos los edificios asociados a NY
-        del ciudad1.nombre
+        
         
         
 class Edificios:
