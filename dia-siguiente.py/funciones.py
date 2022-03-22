@@ -19,10 +19,16 @@ class Empresa: #me crea los atributos para luego guardármelos fuera
 class Empleados: #clase que nos crea los atributos asociados a los nombres de los empleados
     def __init__(self, nomEmpl):
         self.nomEmpl = nomEmpl
-
+        
+#Empleados
 emp1 = Empleados("Martin")
 emp2 = Empleados("Salim")
 emp3 = Empleados("Xing")     
 lista_empleados = [emp1, emp2, emp3]
-print(lista_empleados)
+
+#Edificios
+edif1 = Edificios("A")
+edif2 = Edificios("B")
+edif3 = Edificios("C")
+lista_edificio = [edif1, edif2, edif3]
         
