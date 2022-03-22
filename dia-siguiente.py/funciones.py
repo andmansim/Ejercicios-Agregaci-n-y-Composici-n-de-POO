@@ -7,7 +7,7 @@ class Ciudades:
         self.l_edif.append(edificio)
         
     def devolver (self):
-        return self.nomEdif
+        return self.l_edif
     
 class Edificios:
     def __init__(self, nomEdif):
