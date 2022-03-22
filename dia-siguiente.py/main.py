@@ -13,3 +13,10 @@ if __name__ == "__main__":
     print(funciones.empresa.l_empl.pop().nomEmpl)
     print(funciones.empresa.l_empl.pop().nomEmpl)
     print(funciones.empresa.l_empl.pop().nomEmpl)
+    
+    print("¿Quiere destruir NY? Y/N")
+    usuario = input()
+    if usuario == "Y":
+        pass
+    else:
+        print("Esa opción no es válida, por favor intentelo de nuevo")
