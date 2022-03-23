@@ -20,9 +20,9 @@ class Casa(Ventana, Pared):
         Pared.__init__(self, p_norte, p_sur, p_este, p_oeste)
         
     def superficie(self):
-        #suma = Ventana.superficie
         suma = self.v_norte + self.v_sur + self.v_este + self.v_oeste
         return suma 
 
 
 casa = Casa("pared norte", "pared sur", "pared este", "pared oeste", 3, 5, 7, 0.3)
+print("La superficie acristalada es: " + casa.superficie())
