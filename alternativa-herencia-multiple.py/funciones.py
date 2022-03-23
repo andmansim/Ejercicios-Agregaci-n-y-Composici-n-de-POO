@@ -18,4 +18,7 @@ p_e = Pared("pared este")
 p_o = Pared("pared oeste")
 
 #Superficies de las ventanas
-
+v_n = Ventana (p_n, 3)
+v_s = Ventana (p_s, 5)
+v_e = Ventana (p_e, 7)
+v_o = Ventana (p_o, 0.3)
