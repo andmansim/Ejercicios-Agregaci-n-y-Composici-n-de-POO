@@ -1,6 +1,3 @@
-from re import L
-
-
 class Casa: #tiene paredes
     def __init__(self, pared1, pared2, pared3, pared4):
         self.pared1 = pared1
