@@ -10,7 +10,7 @@ class Casa: #tiene paredes
       
       
     def sumar(self):
-        #for l in self.pared1:
+        #abrimos cada objeto para obtener loa atributos asociados a ellos
         suma = 0
         for v in self.pared1.ventana1:
             suma = suma +   (v.superficie)
