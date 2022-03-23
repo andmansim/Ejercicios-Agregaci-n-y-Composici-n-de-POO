@@ -5,8 +5,6 @@ class Ventana:
         self.v_este = v_este
         self.v_oeste = v_oeste
         
-    
-
 class Pared:
     def __init__(self, p_norte, p_sur, p_este, p_oeste):
         self.p_norte = p_norte
@@ -25,4 +23,5 @@ class Casa(Ventana, Pared):
 
 
 casa = Casa("pared norte", "pared sur", "pared este", "pared oeste", 3, 5, 7, 0.3)
-print("La superficie acristalada es: " + casa.superficie())
+print("La superficie acristalada es:")
+print( casa.superficie())
