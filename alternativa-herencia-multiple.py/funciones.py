@@ -8,25 +8,21 @@ class Ventana:
     
 
 class Pared:
-    def __init__(self, orientacion):
-        self.orientacion = orientacion
+    def __init__(self, p_norte, p_sur, p_este, p_oeste):
+        self.p_norte = p_norte
+        self.p_sur = p_sur
+        self.p_este = p_este
+        self.p_oeste = p_oeste
 
 class Casa(Ventana, Pared):
-    def __init__(self, superficie, orientacion):
-        Ventana.__init__(self, superficie)
-        Pared.__init__(self, orientacion)
+    def __init__(self, p_norte, p_sur, p_este, p_oeste, v_norte, v_sur, v_este, v_oeste):
+        Ventana.__init__(self, v_norte, v_sur, v_este, v_oeste)
+        Pared.__init__(self, p_norte, p_sur, p_este, p_oeste)
         
     def superficie(self):
         #suma = Ventana.superficie
-        suma = v_n + v_s + v_e + v_o
+        suma = self.v_norte + self.v_sur + self.v_este + self.v_oeste
         return suma 
 
-#Orientación de las paredes
-p_n = Pared("pared norte")
-p_s = Pared("pared sur")
-p_e = Pared("pared este")
-p_o = Pared("pared oeste")
 
-#Superficies de las ventanas
-ventana = Ventana (3, 5, 7, 0.3)
-
+casa = Casa("pared norte", "pared sur", "pared este", "pared oeste", 3, 5, 7, 0.3)
