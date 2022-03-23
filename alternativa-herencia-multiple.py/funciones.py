@@ -1,23 +1,25 @@
+class Casa: #tiene paredes
+    def __init__(self):
+        pass
+
+class Pared: #La pared contiene ventanas
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.ventana = [] 
+        
+    def añadir_ventanas(self, v):
+        self.ventana.append(v)
+
 class Ventana:
     def __init__(self, pared, superficie):
         self.pared = pared
         self.superficie = superficie
         
-
-class Pared:
-    def __init__(self, nombre):
-        self.nombre = nombre
-         
-         
-class Casa(Ventana, Pared):
-    def __init__(self, superficie, orientacion):
-        Ventana.__init__(self, superficie)
-        Pared.__init__(self, orientacion)
         
-    def superficie(self):
-        #suma = Ventana.superficie
-        suma = v_n + v_s + v_e + v_o
-        return suma 
+
+
+         
+
 
 #Orientación de las paredes
 p_n = Pared("pared norte")
