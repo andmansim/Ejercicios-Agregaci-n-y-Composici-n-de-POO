@@ -1,12 +1,26 @@
+from re import L
+
+
 class Casa: #tiene paredes
     def __init__(self, pared1, pared2, pared3, pared4):
         self.pared1 = pared1
         self.pared2 = pared2
         self.pared3 = pared3
         self.pared4 = pared4
-    
+      
+      
     def sumar(self):
-        suma = self.pared1 + self.pared2 + self.pared3 + self.pared4
+        #for l in self.pared1:
+        suma = 0
+        for v in self.pared1.ventana1:
+            suma = suma +   (v.superficie)
+        for v in self.pared2.ventana1:
+            suma = suma +   (v.superficie)        
+        for v in self.pared3.ventana1:
+            suma = suma +   (v.superficie)
+        for v in self.pared4.ventana1:
+            suma = suma +   (v.superficie)
+            
         return suma
   
 
@@ -34,7 +48,9 @@ v_n = Ventana (p_n,3)
 v_s = Ventana (p_s,5)
 v_e = Ventana (p_e,7)
 v_o = Ventana (p_o,0.3)
-print (p_n.ventana1)
 
-#asociamos a cada pared con una ventana y su superficie
+casa = Casa(p_n, p_s, p_e, p_o)
+
+print(casa.sumar())
+
 
