@@ -9,10 +9,6 @@ class Ciudades:
     def devolver(self):
         return self.l_edif
     
-
-        
-        
-        
 class Edificios:
     def __init__(self, nomEdif):
         self.nomEdif = nomEdif # A, B, C

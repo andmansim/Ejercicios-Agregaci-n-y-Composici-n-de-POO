@@ -5,7 +5,6 @@ class Casa: #tiene paredes
         self.pared3 = pared3
         self.pared4 = pared4
       
-      
     def sumar(self):
         #abrimos cada objeto para obtener loa atributos asociados a ellos
         suma = 0
@@ -19,14 +18,11 @@ class Casa: #tiene paredes
             suma = suma +   (v.superficie)
             
         return suma
-  
 
 class Pared: #La pared contiene ventanas
     def __init__(self, nombre):
         self.nombre = nombre
         self.ventana1 = [] 
-
-
 
 class Ventana:
     def __init__(self, pared, superficie):
