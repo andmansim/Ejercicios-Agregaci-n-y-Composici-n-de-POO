@@ -30,6 +30,34 @@ class Ventana:
         self.superficie = superficie
         self.pared.ventana1.append(self)
 
+
+#Miramos la proteccion que quiere en las ventanas
+print("Seleccione una protección para cada una de las ventanas")
+print("Opciones: ")
+opciones = ["persiana", "estor", "cortinas", "mosquitera"]
+print(opciones)
+
+print("En la ventana norte, ¿qué protección quiere?")
+r_n = input()
+if r_n not in opciones:
+    raise Exception("No se ha escogido ninguna proteccion de la lista")
+
+print("En la ventana sur, ¿qué protección quiere?")
+r_s = input()
+if r_s not in opciones:
+    raise Exception("No se ha escogido ninguna proteccion de la lista")
+
+print("En la ventana este, ¿qué protección quiere?")
+r_e = input()
+if r_e not in opciones:
+    raise Exception("No se ha escogido ninguna proteccion de la lista")
+
+print("En la ventana oeste, ¿qué protección quiere?")
+r_o = input()
+if r_o not in opciones:
+    raise Exception("No se ha escogido ninguna proteccion de la lista")
+    
+    
 #Orientación de las paredes
 p_n = Pared("pared norte")
 p_s = Pared("pared sur")
@@ -41,6 +69,8 @@ v_n = Ventana (p_n,3)
 v_s = Ventana (p_s,5)
 v_e = Ventana (p_e,7)
 v_o = Ventana (p_o,0.3)
+
+ventana = Ventana.proteccion
 
 casa = Casa(p_n, p_s, p_e, p_o)
 
