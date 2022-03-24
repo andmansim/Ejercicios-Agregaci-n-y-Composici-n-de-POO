@@ -36,3 +36,11 @@ class ParedCortina(Pared, Ventana):
         Pared.__init__(self, nombre)
         Ventana.__init__(self, self, superficie, proteccion = 0) #tiene otro self, porque el atributo pared es lo mismo que en Pared el atributo nombre
 #En Ventana.__init__(....) ponemos proteccion = 0, para que no nos pida ese atributo en ParedCortina, dado que no lo necesitamos
+
+#nueva clase con los elementos en común entre la clase Ventana y ParedCortina
+class Cristal:
+    def __init__(self, superficie):
+        self.superficie = superficie
+    
+    def devolver(self):
+        return self.superficie
