@@ -29,7 +29,6 @@ class Ventana:
     def __init__(self, pared, superficie, proteccion):
         self.pared = pared
         cristal = Cristal(superficie)
-        print (cristal.superficie)        
         self.superficie = cristal.superficie #llamamos a la clase Cristal para que coja de ahí superficie
         self.proteccion = proteccion
         self.pared.ventana1.append(self)
