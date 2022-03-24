@@ -50,4 +50,7 @@ class ParedCortina(Pared, Ventana):
     def __init__(self, nombre, superficie):
         Pared.__init__(self, nombre)
         Ventana.__init__(self, self, superficie) #tiene otro self, porque el atributo pared es lo mismo que en Pared el atributo nombre
-        
+
+pared_cortina = ParedCortina("pared sur", 10)
+casa.pared2 = pared_cortina
+print(casa.sumar())
