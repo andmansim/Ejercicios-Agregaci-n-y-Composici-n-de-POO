@@ -46,4 +46,8 @@ casa = Casa(p_n, p_s, p_e, p_o)
 
 print(casa.sumar())
 
-
+class ParedCortina(Pared, Ventana):
+    def __init__(self, nombre, superficie):
+        Pared.__init__(self, nombre)
+        Ventana.__init__(self, self, superficie) #tiene otro self, porque el atributo pared es lo mismo que en Pared el atributo nombre
+        
