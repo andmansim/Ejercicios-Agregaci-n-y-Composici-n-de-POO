@@ -25,9 +25,10 @@ class Pared: #La pared contiene ventanas
         self.ventana1 = [] 
 
 class Ventana:
-    def __init__(self, pared, superficie):
+    def __init__(self, pared, superficie, proteccion):
         self.pared = pared
         self.superficie = superficie
+        self.proteccion = proteccion
         self.pared.ventana1.append(self)
 
 
@@ -65,12 +66,11 @@ p_e = Pared("pared este")
 p_o = Pared("pared oeste")
 
 #Superficies de las ventanas
-v_n = Ventana (p_n,3)
-v_s = Ventana (p_s,5)
-v_e = Ventana (p_e,7)
-v_o = Ventana (p_o,0.3)
+v_n = Ventana (p_n,3, r_n)
+v_s = Ventana (p_s,5, r_s)
+v_e = Ventana (p_e,7, r_e)
+v_o = Ventana (p_o,0.3, r_o)
 
-ventana = Ventana.proteccion
 
 casa = Casa(p_n, p_s, p_e, p_o)
 
@@ -79,8 +79,8 @@ print(casa.sumar())
 class ParedCortina(Pared, Ventana):
     def __init__(self, nombre, superficie):
         Pared.__init__(self, nombre)
-        Ventana.__init__(self, self, superficie) #tiene otro self, porque el atributo pared es lo mismo que en Pared el atributo nombre
-
+        Ventana.__init__(self, self, superficie, proteccion = 0) #tiene otro self, porque el atributo pared es lo mismo que en Pared el atributo nombre
+#En Ventana.__init__(....) ponemos proteccion = 0, para que no nos pida ese atributo en ParedCortina, dado que no lo necesitamos
 pared_cortina = ParedCortina("pared sur", 10)
 casa.pared2 = pared_cortina
 print(casa.sumar())
