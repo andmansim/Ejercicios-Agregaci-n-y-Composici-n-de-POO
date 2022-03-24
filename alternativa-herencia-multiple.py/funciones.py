@@ -32,7 +32,7 @@ class Ventana:
         self.pared.ventana1.append(self)
 
 
-#Miramos la proteccion que quiere en las ventanas
+'''#Miramos la proteccion que quiere en las ventanas
 print("Seleccione una protección para cada una de las ventanas")
 print("Opciones: ")
 opciones = ["persiana", "estor", "cortinas", "mosquitera"]
@@ -74,13 +74,13 @@ v_o = Ventana (p_o,0.3, r_o)
 
 casa = Casa(p_n, p_s, p_e, p_o)
 
-print(casa.sumar())
+print(casa.sumar())'''
 
 class ParedCortina(Pared, Ventana):
     def __init__(self, nombre, superficie):
         Pared.__init__(self, nombre)
         Ventana.__init__(self, self, superficie, proteccion = 0) #tiene otro self, porque el atributo pared es lo mismo que en Pared el atributo nombre
 #En Ventana.__init__(....) ponemos proteccion = 0, para que no nos pida ese atributo en ParedCortina, dado que no lo necesitamos
-pared_cortina = ParedCortina("pared sur", 10)
+'''pared_cortina = ParedCortina("pared sur", 10)
 casa.pared2 = pared_cortina
-print(casa.sumar())
+print(casa.sumar())'''
