@@ -10,6 +10,7 @@ class Casa: #tiene paredes
         suma = 0
         for v in self.pared1.ventana1:
             suma = suma + v.superficie
+            
         for v in self.pared2.ventana1:
             suma = suma + v.superficie       
         for v in self.pared3.ventana1:
@@ -27,7 +28,9 @@ class Pared: #La pared contiene ventanas
 class Ventana:
     def __init__(self, pared, superficie, proteccion):
         self.pared = pared
-        self.superficie = Cristal(superficie) #llamamos a la clase Cristal para que coja de ahí superficie
+        cristal = Cristal(superficie)
+        print (cristal.superficie)        
+        self.superficie = cristal.superficie #llamamos a la clase Cristal para que coja de ahí superficie
         self.proteccion = proteccion
         self.pared.ventana1.append(self)
 
