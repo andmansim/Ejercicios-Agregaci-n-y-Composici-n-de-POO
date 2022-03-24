@@ -42,8 +42,8 @@ if __name__ == "__main__":
 
 
     casa = funciones.Casa(p_n, p_s, p_e, p_o)
-
     print(casa.sumar())
+    
     pared_cortina = funciones.ParedCortina("pared sur", 10)
     casa.pared2 = pared_cortina
     print(casa.sumar())
