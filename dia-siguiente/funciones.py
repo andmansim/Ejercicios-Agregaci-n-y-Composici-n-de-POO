@@ -5,17 +5,22 @@ class Ciudades:
         
     
 class Edificios:
-    def __init__(self, nomEdif, ciudad):
+    def __init__(self, nomEdif, empr, ciudad):
         self.nomEdif = nomEdif # A, B, C
-        self.Ciudades = ciudad
-        ciudad.l_edif.append(nomEdif) 
+        if ciudad == None:
+            self.Empresa = empr
+            empr.l_edificios.append(nomEdif) 
+            
+        if empr == None:
+            self.Ciudades = ciudad
+            ciudad.l_edif.append(nomEdif) 
 
 
 class Empresa: #me crea los atributos para luego guardármelos fuera
     def __init__(self, nomEmpr):
         self.nomEmpr = nomEmpr # Nombre de la empresa (Yoohoo)
         self.l_empl = [] #lista de los empleados
-        #self.l_edificios = [] #lista que contiene todos los edificios de la empresa
+        self.l_edificios = [] #lista que contiene todos los edificios de la empresa
 
 class Empleados: #clase que nos crea los atributos asociados a los nombres de los empleados
     def __init__(self, nomEmpl, empre):
@@ -38,14 +43,14 @@ emp3 = Empleados("Xing", empresa)
 
 
 #Edificios de la empresa
-edif1 = Edificios("A", empresa)
-edif2 = Edificios("B", empresa)
-edif3 = Edificios("C", empresa)
+edif1 = Edificios("A", empresa, None)
+edif2 = Edificios("B", empresa, None)
+edif3 = Edificios("C", empresa, None)
 
 #Edificios en las ciudades
-edif_1 = Edificios("A", ciudad1)
-edif_2 = Edificios("B", ciudad1)
-edif_3 = Edificios("C", ciudad2)
+edif_1 = Edificios("A", None, ciudad1)
+edif_2 = Edificios("B", None, ciudad1)
+edif_3 = Edificios("C",  None, ciudad2)
 
 def destruirCiudades(objeto):
     print("¿Quiere destruir " + objeto.nombre + " ? Y/N")
