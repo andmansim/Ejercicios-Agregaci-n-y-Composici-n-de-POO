@@ -8,7 +8,7 @@ class Edificios:
     def __init__(self, nomEdif, ciudad):
         self.nomEdif = nomEdif # A, B, C
         self.Ciudades = ciudad
-        ciudad.Edificios.append(nomEdif) 
+        ciudad.l_edif.append(nomEdif) 
 
 
 class Empresa: #me crea los atributos para luego guardármelos fuera
@@ -20,8 +20,8 @@ class Empresa: #me crea los atributos para luego guardármelos fuera
 class Empleados: #clase que nos crea los atributos asociados a los nombres de los empleados
     def __init__(self, nomEmpl, empre):
         self.nomEmpl = nomEmpl
-        self.empre = empre
-        empresa.l_empl.append(nomEmpl)
+        self.Empresa = empre
+        empre.l_empl.append(nomEmpl)
 
 
 #Ciudades
