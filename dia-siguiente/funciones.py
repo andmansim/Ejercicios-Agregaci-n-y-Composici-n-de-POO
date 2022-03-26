@@ -10,18 +10,17 @@ class Ciudades:
         return self.l_edif
     
 class Edificios:
-    def __init__(self, nomEdif):
+    def __init__(self, nomEdif, ciudad):
         self.nomEdif = nomEdif # A, B, C
-        
-    def devolver (self):
-        return self.nomEdif
-        
+        self.ciudad = ciudad
+        ciudad.Edificios.append(nomEdif) 
+
 
 class Empresa: #me crea los atributos para luego guardármelos fuera
-    def __init__(self, nomEmpr, l_empl, l_edificios):
+    def __init__(self, nomEmpr):
         self.nomEmpr = nomEmpr # Nombre de la empresa (Yoohoo)
-        self.l_empl = l_empl #lista de los empleados
-        self.l_edificios = l_edificios #lista que contiene todos los edificios de la empresa
+        self.l_empl = [] #lista de los empleados
+        self.l_edificios = [] #lista que contiene todos los edificios de la empresa
 
 class Empleados: #clase que nos crea los atributos asociados a los nombres de los empleados
     def __init__(self, nomEmpl, empre):
@@ -38,10 +37,10 @@ emp3 = Empleados("Xing", empresa)
 
 
 #Edificios
-edif1 = Edificios("A")
-edif2 = Edificios("B")
-edif3 = Edificios("C")
-lista_edificio = [edif1, edif2, edif3]
+edif1 = Edificios("A", empresa)
+edif2 = Edificios("B", empresa)
+edif3 = Edificios("C", empresa)
+
 
 
 
