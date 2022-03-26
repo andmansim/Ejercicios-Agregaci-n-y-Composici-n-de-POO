@@ -47,3 +47,19 @@ edif_1 = Edificios("A", ciudad1)
 edif_2 = Edificios("B", ciudad1)
 edif_3 = Edificios("C", ciudad2)
 
+def destruirCiudades(objeto):
+    print("¿Quiere destruir " + objeto.nombre + " ? Y/N")
+    usuario = input()
+    borrarciudad = objeto.nombre
+    if usuario == "Y":
+        for i in range(len(objeto.l_edif)):
+            e = objeto.l_edif[i - 1]
+            del e
+            print("Se ha destruido el edifico " + e + " de la ciudad " + borrarciudad)
+        del objeto
+        print("Se ha destruido toda la ciudad de " + borrarciudad)
+        
+    elif usuario == "N":
+        print("Perfecto, gracias por no destruir "+ objeto.nombre)   
+    else:
+        print("Esa opción no es válida, por favor intentelo de nuevo")

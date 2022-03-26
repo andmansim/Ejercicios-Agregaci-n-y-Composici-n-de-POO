@@ -7,15 +7,4 @@ if __name__ == "__main__":
     print("El edificio de la empresa en " + funciones.ciudad2.nombre + " es: " + " ".join(funciones.ciudad2.l_edif))
     print(funciones.empresa.nomEmpr + "tiene a estos empleados " + " ".join(funciones.empresa.l_empl))
 
-    print("¿Quiere destruir NY? Y/N")
-    usuario = input()
-    if usuario == "Y":
-        del funciones.ciudad1.l_edif
-        del funciones.ciudad1
-        print(funciones.ciudad1)
-        print("Se ha destruido toda la ciudad de NY")
-        
-    elif usuario == "N":
-        print("Perfecto, gracias por no destruir NY")   
-    else:
-        print("Esa opción no es válida, por favor intentelo de nuevo")
+    funciones.destruirCiudades(funciones.ciudad1)
