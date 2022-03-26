@@ -24,14 +24,18 @@ class Empresa: #me crea los atributos para luego guardármelos fuera
         self.l_edificios = l_edificios #lista que contiene todos los edificios de la empresa
 
 class Empleados: #clase que nos crea los atributos asociados a los nombres de los empleados
-    def __init__(self, nomEmpl):
+    def __init__(self, nomEmpl, empre):
         self.nomEmpl = nomEmpl
-        
+        self.empre = empre
+
+#Empresa
+empresa = Empresa("Yoohoo")
+       
 #Empleados
-emp1 = Empleados("Martin")
-emp2 = Empleados("Salim")
-emp3 = Empleados("Xing")     
-lista_empleados = [emp1, emp2, emp3]
+emp1 = Empleados("Martin", empresa)
+emp2 = Empleados("Salim", empresa)
+emp3 = Empleados("Xing", empresa)     
+
 
 #Edificios
 edif1 = Edificios("A")
@@ -39,8 +43,7 @@ edif2 = Edificios("B")
 edif3 = Edificios("C")
 lista_edificio = [edif1, edif2, edif3]
 
-#Empresa
-empresa = Empresa("Yoohoo", lista_empleados, lista_edificio)
+
 
 #Ciudad
 ciudad1 = Ciudades("NY")
