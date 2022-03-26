@@ -56,11 +56,12 @@ def destruirCiudades(objeto):
     print("¿Quiere destruir " + objeto.nombre + " ? Y/N")
     usuario = input()
     borrarciudad = objeto.nombre
+    e = ""
     if usuario == "Y":
         for i in range(len(objeto.l_edif)):
             e = objeto.l_edif[i - 1]
-            del e
-            print("Se ha destruido el edifico " + e + " de la ciudad " + borrarciudad)
+            del objeto.l_edif[i - 1]
+            print("Se ha destruido el edificio " + e + " de la ciudad " + borrarciudad)
         del objeto
         print("Se ha destruido toda la ciudad de " + borrarciudad)
         
